@@ -25,6 +25,8 @@ import java.util.Objects;
 public enum CrossoverOperatorType {
 
     SINGLE_POINT("SinglePoint"),
+    SBXCrossover("SBXCrossover"),
+    BLXAlphaCrossover("BLXAlphaCrossover"),
     NULLCROSSOVER("NullCrossover");
 
     /**

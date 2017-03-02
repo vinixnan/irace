@@ -15,23 +15,23 @@ import org.junit.Ignore;
  *
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
-public class IraceRunnerTest {   
+public class IraceRunnerTest {
 
-    @Test      
+    @Test
     @Ignore
     public void testNSGAII() {
         try {
             HookRunCommands jct = new HookRunCommands();
 
             jct.candidateId = 1;
-            jct.directory = System.getProperty("user.dir") + File.separator +  "execDir";
+            jct.directory = System.getProperty("user.dir") + File.separator + "execDir";
             jct.algorithmName = "NSGA-II";
             jct.populationSize = 10;
             jct.maxEvaluations = 10;
             jct.selectionOperator = "Binary";
-            jct.crossoverOperator = "SinglePoint";
+            jct.crossoverOperator = "SBXCrossover";
             jct.crossoverProbability = 0.9;
-            jct.mutationOperator = "BitFlipMutation";
+            jct.mutationOperator = "PolynomialMutation";
             jct.mutationProbability = 0.3;
 
             new IraceRunner().run(jct);
@@ -41,14 +41,14 @@ public class IraceRunnerTest {
         }
     }
 
-    @Test    
+    @Test
     @Ignore
     public void testSPEA2() {
         try {
             HookRunCommands jct = new HookRunCommands();
 
             jct.candidateId = 2;
-            jct.directory = System.getProperty("user.dir") + File.separator +  "execDir";
+            jct.directory = System.getProperty("user.dir") + File.separator + "execDir";
             jct.algorithmName = "SPEA2";
             jct.populationSize = 10;
             jct.maxEvaluations = 10;

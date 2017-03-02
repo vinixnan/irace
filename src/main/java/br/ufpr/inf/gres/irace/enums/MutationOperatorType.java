@@ -25,6 +25,9 @@ import java.util.Objects;
 public enum MutationOperatorType {
 
     BIT_FLIP_MUTATION("BitFlipMutation"),    
+    PolynomialMutation("PolynomialMutation"), 
+    UniformMutation("UniformMutation"), 
+    NonUniformMutation("NonUniformMutation"), 
     NULLMUTATION("NullMutation");
 
     /**

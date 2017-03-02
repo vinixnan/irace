@@ -31,10 +31,10 @@ public class HookRunCommands {
 
     @Parameter(names = {"--directory", "-dir"}, description = "Directory name (String)", required = true)
     public String directory;
-    
+
     @Parameter(names = {"--candidateId", "-ci"}, description = "ID of this execution. Used for differentiating the output files. (int)", required = true)
     public int candidateId;
-    
+
     @Parameter(names = {"--algorithm", "-alg"}, description = "The algorithm name that will be executed (String)", required = true)
     public String algorithmName;
 
@@ -43,7 +43,7 @@ public class HookRunCommands {
 
     @Parameter(names = "--maxEvaluations", description = "Maximum Evaluations (int)", required = true)
     public int maxEvaluations;
-    
+
     @Parameter(names = "--selectionOperator", description = "Selection Operator (String)", required = true)
     public String selectionOperator;
 
@@ -62,22 +62,39 @@ public class HookRunCommands {
     @Parameter(names = "--mutationProbability", description = "Mutation Probability (double)")
     public double mutationProbability;
 
+    @Parameter(names = "--alpha", description = "alpha (double)")
+    public double alpha;
+
+    @Parameter(names = "--distributionIndexCross", description = "Number of distributionIndexCross (double)")
+    public double distributionIndexCross;
+
+    @Parameter(names = "--distributionIndexMuta", description = "Number of distributionIndexMuta (double)")
+    public double distributionIndexMuta;
+
+    @Parameter(names = "--pertubation", description = "Number of pertubation (double)")
+    public double pertubation;
+
 //    @Parameter(names = "--archiveSize", description = " Archive Size in relation the Population Size (double)")
 //    public double archiveSize;
-
     @Override
-    public String toString() {              
-        return  "--directory=" + directory + "\n"
-                + "--candidateId=" + candidateId + "\n"                
-                + "--algorithm=" + algorithmName + "\n"                
+    public String toString() {
+        return "--directory=" + directory + "\n"
+                + "--candidateId=" + candidateId + "\n"
+                + "--algorithm=" + algorithmName + "\n"
                 + "--populationSize=" + populationSize + "\n"
-                + "--maxEvaluations=" + maxEvaluations + "\n"                
-                + "--selectionOperator=" + selectionOperator  + "\n"
-                + "--tournamentSize=" + tournamentSize + "\n" 
+                + "--maxEvaluations=" + maxEvaluations + "\n"
+                + "--selectionOperator=" + selectionOperator + "\n"
+                + "--tournamentSize=" + tournamentSize + "\n"
                 + "--crossoverOperator=" + crossoverOperator + "\n"
                 + "--crossoverProbability=" + crossoverProbability + "\n"
                 + "--mutationOperator=" + mutationOperator + "\n"
-                + "--mutationProbability=" + mutationProbability + "\n";
-                //+ "--archiveSize=" + archiveSize + "\n";
+                + "--mutationProbability=" + mutationProbability + "\n"
+                + "--alpha=" + alpha + "\n"
+                + "--distributionIndexCross=" + distributionIndexCross + "\n"
+                + "--distributionIndexMuta=" + distributionIndexMuta + "\n"
+                + "--pertubation=" + pertubation + "\n";
+
+        //+ "--archiveSize=" + archiveSize + "\n";
     }
+
 }

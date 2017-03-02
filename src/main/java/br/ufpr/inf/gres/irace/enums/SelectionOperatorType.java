@@ -28,7 +28,8 @@ public enum SelectionOperatorType {
     RANDOM("Random"),
     NARYTOURNAMENT("NaryTournament"),
     BINARY("Binary"),
-    BINARY_RANKING_CROWDING("BinaryRankingAndCrowdingDistanceComparator");
+    BINARY_RANKING_CROWDING("BinaryRankingAndCrowdingDistanceComparator"),
+    BinaryTournamentSelection("BinaryTournamentSelection");
 
     /**
      *

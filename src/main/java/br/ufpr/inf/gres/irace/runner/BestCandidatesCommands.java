@@ -58,4 +58,16 @@ public class BestCandidatesCommands {
 
     @Parameter(names = "--mutationProbability", description = "Mutation Probability (double)")
     public double mutationProbability;   
+    
+    @Parameter(names = "--alpha", description = "alpha (double)")
+    public double alpha;
+
+    @Parameter(names = "--distributionIndexCross", description = "Number of distributionIndexCross (double)")
+    public double distributionIndexCross;
+
+    @Parameter(names = "--distributionIndexMuta", description = "Number of distributionIndexMuta (double)")
+    public double distributionIndexMuta;
+
+    @Parameter(names = "--pertubation", description = "Number of pertubation (double)")
+    public double pertubation;
 }

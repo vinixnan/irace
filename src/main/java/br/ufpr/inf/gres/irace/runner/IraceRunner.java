@@ -17,6 +17,7 @@ package br.ufpr.inf.gres.irace.runner;
 
 import br.ufpr.inf.gres.irace.core.HookRunCommands;
 import br.ufpr.inf.gres.irace.core.IHookRun;
+import br.ufpr.inf.gres.irace.core.ProblemBuilder;
 import br.ufpr.inf.gres.irace.enums.AlgorithmType;
 import br.ufpr.inf.gres.irace.enums.CrossoverOperatorType;
 import br.ufpr.inf.gres.irace.enums.MutationOperatorType;
@@ -31,9 +32,8 @@ import org.uma.jmetal.algorithm.multiobjective.spea2.SPEA2Builder;
 import org.uma.jmetal.operator.CrossoverOperator;
 import org.uma.jmetal.operator.MutationOperator;
 import org.uma.jmetal.operator.SelectionOperator;
-import org.uma.jmetal.problem.BinaryProblem;
-import org.uma.jmetal.problem.multiobjective.OneZeroMax;
-import org.uma.jmetal.solution.BinarySolution;
+import org.uma.jmetal.problem.Problem;
+import org.uma.jmetal.solution.DoubleSolution;
 import org.uma.jmetal.util.AlgorithmRunner;
 
 /**
@@ -47,16 +47,17 @@ public class IraceRunner extends ExperimentAlgorithmRunner implements IHookRun {
     public void run(HookRunCommands jct) {
         try {
             System.out.println("Starting");
-            BinaryProblem problem = new OneZeroMax();
+            Problem problem = ProblemBuilder.getProblems()[0];
 
             AlgorithmType algorithmType = AlgorithmType.getEnum(jct.algorithmName);
 
-            MutationOperator mutationOperator = getMutationOperator(jct.mutationProbability, MutationOperatorType.getEnum(jct.mutationOperator));
-            CrossoverOperator crossoverOperator = getCrossoverOperator(jct.crossoverProbability, CrossoverOperatorType.getEnum(jct.crossoverOperator));
+            MutationOperator mutationOperator = getMutationOperator(jct.mutationProbability, jct.distributionIndexMuta, jct.pertubation, jct.maxEvaluations, MutationOperatorType.getEnum(jct.mutationOperator));
+            System.out.println("created 0");
+            CrossoverOperator crossoverOperator = getCrossoverOperator(jct.crossoverProbability, jct.distributionIndexCross, jct.alpha, CrossoverOperatorType.getEnum(jct.crossoverOperator));
+            System.out.println("created 1");
             SelectionOperator selectionOperator = getSelectionOperator(SelectionOperatorType.getEnum(jct.selectionOperator), jct.tournamentSize);
-
-            Algorithm<List<BinarySolution>> algorithm = null;
-
+            System.out.println("created 2");
+            Algorithm<List<DoubleSolution>> algorithm = null;
             switch (algorithmType) {
                 case NSGAII:
                     algorithm = new NSGAIIBuilder<>(problem, crossoverOperator, mutationOperator)
@@ -70,7 +71,7 @@ public class IraceRunner extends ExperimentAlgorithmRunner implements IHookRun {
                             .setSelectionOperator(selectionOperator)
                             .setMaxIterations(jct.maxEvaluations)
                             .setPopulationSize(jct.populationSize)
-                            .build();                
+                            .build();
                     break;
             }
 
@@ -86,7 +87,7 @@ public class IraceRunner extends ExperimentAlgorithmRunner implements IHookRun {
             AlgorithmRunner algorithmRunner = new AlgorithmRunner.Executor(algorithm).execute();
 
             //long computingTime = System.nanoTime() - runningTime;
-            List<BinarySolution> population = algorithm.getResult();
+            List<DoubleSolution> population = algorithm.getResult();
 
             printFinalSolutionSet(population, jct.directory, jct.candidateId + "");
             printComputingTime(algorithmRunner.getComputingTime(), jct.directory, jct.candidateId + "");

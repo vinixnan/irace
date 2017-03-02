@@ -29,11 +29,16 @@
 
 # 1:                 2:                        3: 4:      5:
 algorithm            "--algorithm "            o  ("NSGA-II")
-populationSize       "--populationSize="       c  (50,100,150,200,250,300)
-maxEvaluations       "--maxEvaluations="       c  (2000)
-selectionOperator    "--selectionOperator="    c  ("KTournament","Random","NaryTournament","Binary","BinaryRankingAndCrowdingDistanceComparator")
+populationSize       "--populationSize="       c  (100)
+maxEvaluations       "--maxEvaluations="       c  (400)
+selectionOperator    "--selectionOperator="    c  ("BinaryTournamentSelection")
 tournamentSize       "--tournamentSize "       c  (2,4,6,8,10) | selectionOperator == 'KTournament'
-crossoverOperator    "--crossoverOperator="    c  ("NullCrossover","SinglePoint")
+crossoverOperator    "--crossoverOperator="    c  ("SBXCrossover","BLXAlphaCrossover")
 crossoverProbability "--crossoverProbability=" r  (0.00,1) | crossoverOperator != "NullCrossover"
-mutationOperator     "--mutationOperator="     c  ("NullMutation","BitFlipMutation")
+mutationOperator     "--mutationOperator="     c  ("PolynomialMutation","UniformMutation","NonUniformMutation")
 mutationProbability  "--mutationProbability "  r  (0.00,1) | mutationOperator != "NullMutation"
+alpha "--alpha=" r  (0.00,1) | crossoverOperator != "NullCrossover"
+distributionIndexCross "--distributionIndexCross=" r  (0.00,100) | crossoverOperator != "NullCrossover"
+distributionIndexMuta "--distributionIndexMuta=" r  (0.00,100) | mutationOperator != "NullMutation"
+pertubation "--pertubation=" r  (0.00,1) | crossoverOperator != "NullCrossover"
+

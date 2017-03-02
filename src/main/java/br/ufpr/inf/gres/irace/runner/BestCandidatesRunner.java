@@ -15,6 +15,10 @@
  */
 package br.ufpr.inf.gres.irace.runner;
 
+import br.ufpr.inf.gres.irace.core.ProblemBuilder;
+import br.ufpr.inf.gres.irace.enums.CrossoverOperatorType;
+import br.ufpr.inf.gres.irace.enums.MutationOperatorType;
+import static br.ufpr.inf.gres.irace.runner.ExperimentAlgorithmRunner.getCrossoverOperator;
 import com.beust.jcommander.JCommander;
 import java.io.File;
 import java.text.DateFormat;
@@ -27,7 +31,6 @@ import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler;
-import static br.ufpr.inf.gres.irace.runner.ExperimentAlgorithmRunner.getCrossoverOperator;
 import static br.ufpr.inf.gres.irace.runner.ExperimentAlgorithmRunner.getMutationOperator;
 import static br.ufpr.inf.gres.irace.runner.ExperimentAlgorithmRunner.getSelectionOperator;
 import org.uma.jmetal.algorithm.Algorithm;
@@ -36,9 +39,8 @@ import org.uma.jmetal.algorithm.multiobjective.spea2.SPEA2Builder;
 import org.uma.jmetal.operator.CrossoverOperator;
 import org.uma.jmetal.operator.MutationOperator;
 import org.uma.jmetal.operator.SelectionOperator;
-import org.uma.jmetal.problem.BinaryProblem;
-import org.uma.jmetal.problem.multiobjective.OneZeroMax;
-import org.uma.jmetal.solution.BinarySolution;
+import org.uma.jmetal.problem.Problem;
+import org.uma.jmetal.solution.DoubleSolution;
 import org.uma.jmetal.util.AlgorithmRunner;
 
 /**
@@ -73,15 +75,16 @@ public class BestCandidatesRunner extends ExperimentAlgorithmRunner {
                 System.out.println("Command Line: " + candidate);
 
                 System.out.println("Starting");
-                BinaryProblem problem = new OneZeroMax();
+                Problem problem = ProblemBuilder.getProblems()[0];
 
                 br.ufpr.inf.gres.irace.enums.AlgorithmType algorithmType = br.ufpr.inf.gres.irace.enums.AlgorithmType.getEnum(jct.algorithmName);
 
-                MutationOperator mutationOperator = getMutationOperator(jct.mutationProbability, br.ufpr.inf.gres.irace.enums.MutationOperatorType.getEnum(jct.mutationOperator));
-                CrossoverOperator crossoverOperator = getCrossoverOperator(jct.crossoverProbability, br.ufpr.inf.gres.irace.enums.CrossoverOperatorType.getEnum(jct.crossoverOperator));
+                MutationOperator mutationOperator = getMutationOperator(jct.mutationProbability, jct.distributionIndexMuta, jct.pertubation, jct.maxEvaluations, MutationOperatorType.getEnum(jct.mutationOperator));
+                CrossoverOperator crossoverOperator = getCrossoverOperator(jct.crossoverProbability, jct.distributionIndexCross, jct.alpha, CrossoverOperatorType.getEnum(jct.crossoverOperator));
+
                 SelectionOperator selectionOperator = getSelectionOperator(br.ufpr.inf.gres.irace.enums.SelectionOperatorType.getEnum(jct.selectionOperator), jct.tournamentSize);
 
-                Algorithm<List<BinarySolution>> algorithm = null;
+                Algorithm<List<DoubleSolution>> algorithm = null;
 
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
@@ -104,14 +107,14 @@ public class BestCandidatesRunner extends ExperimentAlgorithmRunner {
                                     .setMaxIterations(jct.maxEvaluations)
                                     .setPopulationSize(jct.populationSize)
                                     .build();
-                            break;                            
+                            break;
                     }
 
                     //long runningTime = System.nanoTime();
                     algorithm.run();
                     AlgorithmRunner algorithmRunner = new AlgorithmRunner.Executor(algorithm).execute();
                     //long computingTime = System.nanoTime() - runningTime;                    
-                    List<BinarySolution> population = algorithm.getResult();
+                    List<DoubleSolution> population = algorithm.getResult();
 
                     String directory = String.format("tunningResults/best_candidates/%s/%s/best_candidate_%s", problem.getName(), algorithm.getName(), jct.candidateId);
 

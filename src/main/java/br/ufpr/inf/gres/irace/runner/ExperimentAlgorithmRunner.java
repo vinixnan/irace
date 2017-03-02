@@ -17,10 +17,15 @@ import br.ufpr.inf.gres.irace.enums.SelectionOperatorType;
 import org.uma.jmetal.operator.CrossoverOperator;
 import org.uma.jmetal.operator.MutationOperator;
 import org.uma.jmetal.operator.SelectionOperator;
+import org.uma.jmetal.operator.impl.crossover.BLXAlphaCrossover;
 import org.uma.jmetal.operator.impl.crossover.NullCrossover;
+import org.uma.jmetal.operator.impl.crossover.SBXCrossover;
 import org.uma.jmetal.operator.impl.crossover.SinglePointCrossover;
 import org.uma.jmetal.operator.impl.mutation.BitFlipMutation;
+import org.uma.jmetal.operator.impl.mutation.NonUniformMutation;
 import org.uma.jmetal.operator.impl.mutation.NullMutation;
+import org.uma.jmetal.operator.impl.mutation.PolynomialMutation;
+import org.uma.jmetal.operator.impl.mutation.UniformMutation;
 import org.uma.jmetal.operator.impl.selection.BinaryTournamentSelection;
 import org.uma.jmetal.operator.impl.selection.NaryTournamentSelection;
 import org.uma.jmetal.operator.impl.selection.RandomSelection;
@@ -89,19 +94,29 @@ public class ExperimentAlgorithmRunner extends AbstractAlgorithmRunner {
         }
     }
 
-    public static CrossoverOperator getCrossoverOperator(double crossoverProbability, CrossoverOperatorType crossoverOperator) {
+    public static CrossoverOperator getCrossoverOperator(double crossoverProbability, double distributionIndex, double alpha, CrossoverOperatorType crossoverOperator) {
         switch (crossoverOperator) {
             case SINGLE_POINT:
                 return new SinglePointCrossover(crossoverProbability);
+            case SBXCrossover:
+                    return new SBXCrossover(crossoverProbability, distributionIndex);
+            case BLXAlphaCrossover:
+                    return new BLXAlphaCrossover(crossoverProbability, alpha);
             default:
                 return new NullCrossover();
         }
     }
 
-    public static MutationOperator getMutationOperator(double mutationProbability, MutationOperatorType mutationOperator) {
+    public static MutationOperator getMutationOperator(double mutationProbability, double distributionIndex, double pertubation, int maxIterations, MutationOperatorType mutationOperator) {
         switch (mutationOperator) {
             case BIT_FLIP_MUTATION:
                 return new BitFlipMutation(mutationProbability);
+            case PolynomialMutation:
+                return new PolynomialMutation(mutationProbability, distributionIndex);
+            case UniformMutation:
+                return new UniformMutation(mutationProbability, pertubation);
+            case NonUniformMutation:
+                return new NonUniformMutation(mutationProbability, pertubation, maxIterations);
             default:
                 return new NullMutation();
         }
