@@ -22,6 +22,7 @@ import br.ufpr.inf.gres.irace.enums.AlgorithmType;
 import br.ufpr.inf.gres.irace.enums.CrossoverOperatorType;
 import br.ufpr.inf.gres.irace.enums.MutationOperatorType;
 import br.ufpr.inf.gres.irace.enums.SelectionOperatorType;
+import br.ufpr.inf.gres.irace.measure.qualityindicator.HypervolumeCalculatorWFG;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -91,6 +92,12 @@ public class IraceRunner extends ExperimentAlgorithmRunner implements IHookRun {
 
             printFinalSolutionSet(population, jct.directory, jct.candidateId + "");
             printComputingTime(algorithmRunner.getComputingTime(), jct.directory, jct.candidateId + "");
+            
+            String pf = "/home/vinicius/Projetos/irace/pareto_fronts/" + problem.getName() + "." + problem.getNumberOfObjectives() + "D.pf";
+            System.out.println(pf);
+            HypervolumeCalculatorWFG hv=new HypervolumeCalculatorWFG(problem.getNumberOfObjectives(), pf);
+            double hypervolume = hv.execute(population);
+            System.out.println(hypervolume);
 
             date = new Date();
             System.out.println("Finished in " + dateFormat.format(date));

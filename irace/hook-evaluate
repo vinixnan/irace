@@ -40,12 +40,12 @@ if [ -s "${HV}" ]; then
     COST=$(cat "${HV}" | grep -e '^[0-9]' | cut -f1)
     # Negative because hypervolume is maximised but irace minimises.
     echo "-$COST"
-    rm -f c${CANDIDATE}.*
+    #rm -f c${CANDIDATE}.*
 
     # -- Delete the unecessary files
     # Preservo o FUN para cÃƒÂ¡lculo do HV =D FUN_${CANDIDATE}    
-    rm VAR_${CANDIDATE}
-    rm TIME_FUN_${CANDIDATE}
+    #rm VAR_${CANDIDATE}
+    #rm TIME_FUN_${CANDIDATE}
 
     exit 0
 else

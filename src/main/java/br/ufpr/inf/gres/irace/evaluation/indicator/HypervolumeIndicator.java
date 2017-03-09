@@ -48,7 +48,7 @@ public class HypervolumeIndicator implements IHookEvaluate {
     public void run(HookEvaluateCommands jct) {
         try {
             Problem problem = ProblemBuilder.getProblems()[0];
-            String pf = "pareto_fronts/" + problem.getName() + "." + problem.getNumberOfObjectives() + "D.pf";
+            String pf = "/home/vinicius/Projetos/irace/pareto_fronts/" + problem.getName() + "." + problem.getNumberOfObjectives() + "D.pf";
             HypervolumeCalculatorWFG hv=new HypervolumeCalculatorWFG(problem.getNumberOfObjectives(), pf);
             //HypervolumeCalculator hv = new HypervolumeCalculator();
 

@@ -30,7 +30,7 @@
 # 1:                 2:                        3: 4:      5:
 algorithm            "--algorithm "            o  ("NSGA-II")
 populationSize       "--populationSize="       c  (100)
-maxEvaluations       "--maxEvaluations="       c  (75000)
+maxEvaluations       "--maxEvaluations="       c  (2400)
 selectionOperator    "--selectionOperator="    c  ("BinaryTournamentSelection")
 tournamentSize       "--tournamentSize "       c  (2,4,6,8,10) | selectionOperator == 'KTournament'
 crossoverOperator    "--crossoverOperator="    c  ("SBXCrossover","BLXAlphaCrossover")
