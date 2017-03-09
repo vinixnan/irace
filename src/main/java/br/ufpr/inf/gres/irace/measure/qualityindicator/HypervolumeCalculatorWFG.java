@@ -1,9 +1,11 @@
 package br.ufpr.inf.gres.irace.measure.qualityindicator;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 import org.uma.jmetal.qualityindicator.impl.hypervolume.PISAHypervolume;
 import org.uma.jmetal.solution.Solution;
 import org.uma.jmetal.util.front.Front;
+import org.uma.jmetal.util.front.imp.ArrayFront;
 import org.uma.jmetal.util.front.util.FrontNormalizer;
 import org.uma.jmetal.util.front.util.FrontUtils;
 import org.uma.jmetal.util.point.util.PointSolution;
@@ -28,6 +30,13 @@ public class HypervolumeCalculatorWFG extends Calculator {
 
     @Override
     public double execute(List<? extends Solution<?>> front) {
+        this.addParetoFront(paretoTrueFront);
+        return this.execute(front, maximumValues, minimumValues);
+    }
+
+    @Override
+    public double execute(String frontPath) throws FileNotFoundException {
+        ArrayFront front = new ArrayFront(frontPath);
         this.addParetoFront(paretoTrueFront);
         return this.execute(front, maximumValues, minimumValues);
     }

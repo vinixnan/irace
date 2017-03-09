@@ -55,11 +55,11 @@ maxExperiments = 2000
 digits = 2
 
 ## Specifies the statistical test type: F-test or t-test.
-testType = "t-test"
+#testType = "t-test"
 
 ## Number of calls to hookRun to execute in parallel. Less than 2
 # means calls to hookRun are sequentially executed.
-parallel = 3
+parallel = 7
 
 ## Enable/disable load-balancing when executing experiments in
 ## parallel. Load-balancing makes better use of computing resources, but
