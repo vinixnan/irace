@@ -48,7 +48,7 @@ public class IraceRunner extends ExperimentAlgorithmRunner implements IHookRun {
         try {
             System.out.println("Starting");
             Problem problem = ProblemBuilder.getProblems()[0];
-
+            
             AlgorithmType algorithmType = AlgorithmType.getEnum(jct.algorithmName);
 
             MutationOperator mutationOperator = getMutationOperator(jct.mutationProbability, jct.distributionIndexMuta, jct.pertubation, jct.maxEvaluations, MutationOperatorType.getEnum(jct.mutationOperator));

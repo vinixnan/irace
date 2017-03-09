@@ -18,6 +18,11 @@ import org.uma.jmetal.problem.multiobjective.wfg.*;
  */
 public class ProblemBuilder {
 
+    /*
+        nObj = 2; //M Number of objective functions
+        k = 4; //Number of position parameters
+        l = 20; //Number of distance parameters
+    */
     public static Problem[] getProblems(String tipo, int wfgNumberOfPositions, int numberOfDistanceVariables, int numberOfObjectives) throws ClassNotFoundException {
         if (tipo.equalsIgnoreCase("WFG1")) {
             Problem[] problems = {

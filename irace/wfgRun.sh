@@ -1,6 +1,6 @@
 #!/bin/bash
 problems="WFG9 WFG2 WFG3 WFG6 WFG8 WFG5 WFG1 WFG4 WFG7"
-#problems="WFG9"
+problems="WFG1"
 
 function addToExecution {
 	problem=$1

@@ -30,7 +30,12 @@ import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 import br.ufpr.inf.gres.irace.core.HookEvaluateCommands;
 import br.ufpr.inf.gres.irace.core.IHookEvaluate;
+import br.ufpr.inf.gres.irace.core.ProblemBuilder;
 import br.ufpr.inf.gres.irace.measure.qualityindicator.HypervolumeCalculator;
+import br.ufpr.inf.gres.irace.measure.qualityindicator.HypervolumeCalculatorWFG;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.uma.jmetal.problem.Problem;
 
 /**
  *
@@ -42,8 +47,12 @@ public class HypervolumeIndicator implements IHookEvaluate {
     @Override
     public void run(HookEvaluateCommands jct) {
         try {
-            HypervolumeCalculator hv = new HypervolumeCalculator();
+            Problem problem = ProblemBuilder.getProblems()[0];
+            String pf = "pareto_fronts/" + problem.getName() + "." + problem.getNumberOfObjectives() + "D.pf";
+            HypervolumeCalculatorWFG hv=new HypervolumeCalculatorWFG(problem.getNumberOfObjectives(), pf);
+            //HypervolumeCalculator hv = new HypervolumeCalculator();
 
+            /*
             File dir = new File(jct.directory);
 
             for (File file : dir.listFiles((directory, name) -> name.startsWith("FUN_"))) {
@@ -77,8 +86,9 @@ public class HypervolumeIndicator implements IHookEvaluate {
 
             // save properties to project resources folder            
             builder.save();
-
-            double hypervolume = hv.calculateHypervolume(jct.directory + File.separator + "FUN_" + jct.candidateId);
+            */
+            //double hypervolume = hv.calculateHypervolume(jct.directory + File.separator + "FUN_" + jct.candidateId);
+            double hypervolume = hv.execute(jct.directory + File.separator + "FUN_" + jct.candidateId);
 
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(jct.directory + File.separator + jct.fileName), false))) {
                 writer.write(hypervolume + "");
@@ -90,6 +100,8 @@ public class HypervolumeIndicator implements IHookEvaluate {
             System.err.println("Failed in to save hypervolume value. See details: \n" + ex.getMessage());
         } catch (ConfigurationException ex) {
             System.err.println("Failed in commons configuration2. See details: \n" + ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(HypervolumeIndicator.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         System.exit(1);

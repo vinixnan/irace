@@ -30,15 +30,15 @@
 # 1:                 2:                        3: 4:      5:
 algorithm            "--algorithm "            o  ("NSGA-II")
 populationSize       "--populationSize="       c  (100)
-maxEvaluations       "--maxEvaluations="       c  (10000)
+maxEvaluations       "--maxEvaluations="       c  (75000)
 selectionOperator    "--selectionOperator="    c  ("BinaryTournamentSelection")
 tournamentSize       "--tournamentSize "       c  (2,4,6,8,10) | selectionOperator == 'KTournament'
 crossoverOperator    "--crossoverOperator="    c  ("SBXCrossover","BLXAlphaCrossover")
-crossoverProbability "--crossoverProbability=" r  (0.00,1) | crossoverOperator != "NullCrossover"
+crossoverProbability "--crossoverProbability=" r  (0.00,1)
 mutationOperator     "--mutationOperator="     c  ("PolynomialMutation","UniformMutation","NonUniformMutation")
-mutationProbability  "--mutationProbability "  r  (0.00,1) | mutationOperator != "NullMutation"
-alpha "--alpha=" r  (0.00,1) | crossoverOperator != "NullCrossover"
-distributionIndexCross "--distributionIndexCross=" r  (0.00,100) | crossoverOperator != "NullCrossover"
-distributionIndexMuta "--distributionIndexMuta=" r  (0.00,100) | mutationOperator != "NullMutation"
-pertubation "--pertubation=" r  (0.00,1) | crossoverOperator != "NullCrossover"
+mutationProbability  "--mutationProbability "  r  (0.00,1)
+alpha "--alpha=" r  (0.00,1) | crossoverOperator == 'BLXAlphaCrossover'
+distributionIndexCross "--distributionIndexCross=" r  (0.00,100) | crossoverOperator == 'SBXCrossover'
+distributionIndexMuta "--distributionIndexMuta=" r  (0.00,100) | mutationOperator == 'PolynomialMutation'
+pertubation "--pertubation=" r  (0.00,1) | mutationOperator != "PolynomialMutation"
 
