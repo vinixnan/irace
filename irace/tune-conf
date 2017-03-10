@@ -48,8 +48,8 @@ hookEvaluate = "./hook-evaluate"
 #http://iridia.ulb.ac.be/IridiaTrSeries/link/IridiaTr2012-019.pdf recomended 2000 running 200eval. We will use 300eval for 600.000 eval
 #maxExperiments = 2000
 #http://iridia.ulb.ac.be/IridiaTrSeries/rev/IridiaTr2014-012r001.pdf
-#maxExperiments = 20000
-maxExperiments=300
+maxExperiments = 20000
+#maxExperiments=300
 
 ## Indicates the number of decimal places to be considered for the
 ## real parameters.
