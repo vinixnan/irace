@@ -1,0 +1,283 @@
+irace	version: 1.07.1202
+********************************************************************************
+* irace: An implementation in R of Iterated Race                               *
+* Copyright (C) 2010-2014                                                      *
+* Manuel Lopez-Ibanez     <manuel.lopez-ibanez@ulb.ac.be>                      *
+* Jeremie Dubois-Lacoste  <jeremie.dubois-lacoste@ulb.ac.be>                   *
+*                                                                              *
+* This is free software, and you are welcome to redistribute it under certain  *
+* conditions.  See the GNU General Public License for details. There is NO     *
+* warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  *
+*                                                                              *
+* irace builds upon previous code from the race package                        *
+* Copyright (C) 2003 Mauro Birattari                                           *
+********************************************************************************
+Warning: A default configuration file './tune-conf' has been found and will be read
+# 1 expression(s) specifying forbidden configurations read from '/home/vinicius/Projetos/irace/irace/forbidden'
+# 2017-03-10 21:48:57 BRT: Initialization
+# nbIterations: 5
+# minNbSurvival: 5
+# nbParameters: 9
+# seed: 1721331748
+# confidence level: 0.95
+# remainingBudget: 2000
+# mu: 5
+
+# 2017-03-10 21:48:57 BRT: Iteration 1 of 5
+# experimentsUsedSoFar: 0
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 2000
+# currentBudget: 400
+# nbCandidates: 66
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|         66|         42|    -0.4573|         66|00:00:32|
+|x|          2|         66|         42|    -0.4539|        132|00:00:32|
+|x|          3|         66|         28|    -0.4491|        198|00:00:32|
+|x|          4|         66|         42|    -0.4505|        264|00:00:32|
+|-|          5|          6|         42|    -0.4509|        330|00:00:32|
+|=|          6|          6|         42|    -0.4513|        336|00:00:02|
+|=|          7|          6|         42|    -0.4501|        342|00:00:02|
+|-|          8|          4|         42|    -0.4493|        348|00:00:02|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          42	mean value:    -0.4493
+
+Description of the selected candidate:
+   .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+42   42   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.93  UniformMutation                 0.3             NA  0.23                     NA                    NA        0.28       NA
+
+
+# Elite candidates:
+   algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+42   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.93    UniformMutation                0.30             NA  0.23                     NA                    NA        0.28
+53   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.77    UniformMutation                0.46             NA  0.28                     NA                    NA        0.40
+13   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.46    UniformMutation                0.49             NA  0.19                     NA                    NA        0.00
+28   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.49 PolynomialMutation                0.91             NA  0.13                     NA                 36.49          NA
+# 2017-03-10 21:51:49 BRT: Iteration 2 of 5
+# experimentsUsedSoFar: 348
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 1652
+# currentBudget: 413
+# nbCandidates: 59
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|         59|          9|    -0.4601|         59|00:00:29|
+|x|          2|         59|          2|    -0.4532|        118|00:00:29|
+|x|          3|         59|         12|    -0.4544|        177|00:00:29|
+|x|          4|         59|         12|    -0.4578|        236|00:00:29|
+|-|          5|          6|         12|    -0.4569|        295|00:00:29|
+|=|          6|          6|         12|    -0.4562|        301|00:00:02|
+|=|          7|          6|         12|    -0.4572|        307|00:00:02|
+|-|          8|          3|         12|    -0.4575|        313|00:00:03|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          12	mean value:    -0.4575
+
+Description of the selected candidate:
+   .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+74   74   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.95 PolynomialMutation                0.39             NA  0.21                     NA                 77.66          NA       42
+
+
+# Elite candidates:
+   algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+74   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.95 PolynomialMutation                0.39             NA  0.21                     NA                 77.66          NA
+53   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.77    UniformMutation                0.46             NA  0.28                     NA                    NA        0.40
+98   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.80    UniformMutation                0.27             NA  0.22                     NA                    NA        0.34
+# 2017-03-10 21:54:24 BRT: Iteration 3 of 5
+# experimentsUsedSoFar: 661
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 1339
+# currentBudget: 446
+# nbCandidates: 55
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|         55|         54|     -0.461|         55|00:00:28|
+|x|          2|         55|          2|    -0.4611|        110|00:00:27|
+|x|          3|         55|         54|    -0.4594|        165|00:00:27|
+|x|          4|         55|         54|     -0.457|        220|00:00:27|
+|-|          5|         10|         54|    -0.4545|        275|00:00:27|
+|=|          6|         10|         54|    -0.4544|        285|00:00:05|
+|=|          7|         10|         54|     -0.451|        295|00:00:04|
+|=|          8|         10|         54|    -0.4518|        305|00:00:05|
+|=|          9|         10|         54|    -0.4529|        315|00:00:05|
+|=|         10|         10|         54|      -0.45|        325|00:00:05|
+|=|         11|         10|          3|    -0.4497|        335|00:00:04|
+|=|         12|         10|         54|    -0.4494|        345|00:00:05|
+|=|         13|         10|         11|    -0.4481|        355|00:00:05|
+|=|         14|         10|         11|     -0.449|        365|00:00:05|
+|=|         15|         10|         11|    -0.4495|        375|00:00:05|
+|=|         16|         10|         11|    -0.4492|        385|00:00:05|
+|=|         17|         10|         11|    -0.4496|        395|00:00:05|
+|=|         18|         10|         11|    -0.4501|        405|00:00:05|
+|=|         19|         10|         11|      -0.45|        415|00:00:04|
+|=|         20|         10|         11|     -0.449|        425|00:00:04|
+|=|         21|         10|         11|    -0.4487|        435|00:00:05|
+|=|         22|         10|         11|    -0.4485|        445|00:00:05|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          11	mean value:    -0.4485
+
+Description of the selected candidate:
+    .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+129  129   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.59             NA   0.2                     NA                    NA        0.41       53
+
+
+# Elite candidates:
+    algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+129   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.98    UniformMutation                0.59             NA  0.20                     NA                    NA        0.41
+172   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.95 PolynomialMutation                0.34             NA  0.16                     NA                 63.01          NA
+144   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.97    UniformMutation                0.37             NA  0.14                     NA                    NA        0.15
+98    NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.80    UniformMutation                0.27             NA  0.22                     NA                    NA        0.34
+171   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.85 PolynomialMutation                0.80             NA  0.18                     NA                 73.86          NA
+# 2017-03-10 21:58:08 BRT: Iteration 4 of 5
+# experimentsUsedSoFar: 1106
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 894
+# currentBudget: 447
+# nbCandidates: 49
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|         49|          3|    -0.4684|         49|00:00:24|
+|x|          2|         49|          3|    -0.4689|         98|00:00:24|
+|x|          3|         49|         32|    -0.4589|        147|00:00:24|
+|x|          4|         49|         39|    -0.4514|        196|00:00:24|
+|-|          5|         24|         15|    -0.4545|        245|00:00:24|
+|=|          6|         24|         15|    -0.4541|        269|00:00:11|
+|=|          7|         24|          4|      -0.45|        293|00:00:11|
+|=|          8|         24|         31|    -0.4525|        317|00:00:11|
+|=|          9|         24|         31|    -0.4536|        341|00:00:11|
+|=|         10|         24|         31|    -0.4531|        365|00:00:12|
+|=|         11|         24|         31|    -0.4518|        389|00:00:11|
+|=|         12|         24|         31|    -0.4528|        413|00:00:12|
+|=|         13|         24|         31|    -0.4533|        437|00:00:11|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          31	mean value:    -0.4533
+
+Description of the selected candidate:
+    .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+199  199   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.88 PolynomialMutation                0.24             NA   0.2                     NA                 49.92          NA      172
+
+
+# Elite candidates:
+    algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+199   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.88 PolynomialMutation                0.24             NA  0.20                     NA                 49.92          NA
+200   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.93 PolynomialMutation                0.38             NA  0.23                     NA                 75.95          NA
+98    NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.80    UniformMutation                0.27             NA  0.22                     NA                    NA        0.34
+175   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.89 PolynomialMutation                0.21             NA  0.13                     NA                 67.77          NA
+204   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.82    UniformMutation                0.59             NA  0.24                     NA                    NA        0.14
+# 2017-03-10 22:01:45 BRT: Iteration 5 of 5
+# experimentsUsedSoFar: 1543
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 457
+# currentBudget: 457
+# nbCandidates: 45
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|         45|          8|    -0.4686|         45|00:00:22|
+|x|          2|         45|          8|    -0.4605|         90|00:00:22|
+|x|          3|         45|          5|     -0.461|        135|00:00:22|
+|x|          4|         45|          5|     -0.458|        180|00:00:22|
+|-|          5|         21|          5|    -0.4595|        225|00:00:22|
+|=|          6|         21|          5|    -0.4569|        246|00:00:10|
+|=|          7|         21|          5|    -0.4581|        267|00:00:10|
+|=|          8|         21|          5|    -0.4568|        288|00:00:10|
+|=|          9|         21|          5|    -0.4557|        309|00:00:10|
+|=|         10|         21|          5|    -0.4561|        330|00:00:10|
+|=|         11|         21|          5|    -0.4556|        351|00:00:10|
+|=|         12|         21|         45|    -0.4526|        372|00:00:10|
+|=|         13|         21|         45|     -0.452|        393|00:00:10|
+|=|         14|         21|          5|    -0.4533|        414|00:00:10|
+|=|         15|         21|          5|    -0.4533|        435|00:00:10|
+|=|         16|         21|          5|    -0.4512|        456|00:00:10|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:           5	mean value:    -0.4512
+
+Description of the selected candidate:
+    .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+204  204   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.82  UniformMutation                0.59             NA  0.24                     NA                    NA        0.14      129
+
+
+# Elite candidates:
+    algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+204   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.82    UniformMutation                0.59             NA  0.24                     NA                    NA        0.14
+220   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.91 PolynomialMutation                0.25             NA  0.18                     NA                 84.04          NA
+98    NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.80    UniformMutation                0.27             NA  0.22                     NA                    NA        0.34
+257   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.83    UniformMutation                0.22             NA  0.25                     NA                    NA        1.00
+242   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.83 PolynomialMutation                0.28             NA  0.17                     NA                 89.59          NA
+# 2017-03-10 22:05:33 BRT: Stopped because there is no enough budget left to race newly sampled configurations
+# Iteration: 6
+# nbIterations: 6
+# experimentsUsedSoFar: 1999
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 1
+# currentBudget: 1
+# number of elites: 5
+# nbCandidates: 0
+# mu: 5
+# Best candidates
+    algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability   mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+204   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.82    UniformMutation                0.59             NA  0.24                     NA                    NA        0.14
+220   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.91 PolynomialMutation                0.25             NA  0.18                     NA                 84.04          NA
+98    NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.80    UniformMutation                0.27             NA  0.22                     NA                    NA        0.34
+257   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.83    UniformMutation                0.22             NA  0.25                     NA                    NA        1.00
+242   NSGA-II            100           2400 BinaryTournamentSelection BLXAlphaCrossover                 0.83 PolynomialMutation                0.28             NA  0.17                     NA                 89.59          NA
+# Best candidates (as commandlines)
+1  --algorithm NSGA-II --populationSize=100 --maxEvaluations=2400 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.82 --mutationOperator=UniformMutation --mutationProbability 0.59 --alpha=0.24 --pertubation=0.14
+2  --algorithm NSGA-II --populationSize=100 --maxEvaluations=2400 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.91 --mutationOperator=PolynomialMutation --mutationProbability 0.25 --alpha=0.18 --distributionIndexMuta=84.04
+3  --algorithm NSGA-II --populationSize=100 --maxEvaluations=2400 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.8 --mutationOperator=UniformMutation --mutationProbability 0.27 --alpha=0.22 --pertubation=0.34
+4  --algorithm NSGA-II --populationSize=100 --maxEvaluations=2400 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.83 --mutationOperator=UniformMutation --mutationProbability 0.22 --alpha=0.25 --pertubation=1
+5  --algorithm NSGA-II --populationSize=100 --maxEvaluations=2400 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.83 --mutationOperator=PolynomialMutation --mutationProbability 0.28 --alpha=0.17 --distributionIndexMuta=89.59

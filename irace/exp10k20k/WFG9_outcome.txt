@@ -1,0 +1,506 @@
+irace	version: 1.07.1202
+********************************************************************************
+* irace: An implementation in R of Iterated Race                               *
+* Copyright (C) 2010-2014                                                      *
+* Manuel Lopez-Ibanez     <manuel.lopez-ibanez@ulb.ac.be>                      *
+* Jeremie Dubois-Lacoste  <jeremie.dubois-lacoste@ulb.ac.be>                   *
+*                                                                              *
+* This is free software, and you are welcome to redistribute it under certain  *
+* conditions.  See the GNU General Public License for details. There is NO     *
+* warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  *
+*                                                                              *
+* irace builds upon previous code from the race package                        *
+* Copyright (C) 2003 Mauro Birattari                                           *
+********************************************************************************
+Warning: A default configuration file './tune-conf' has been found and will be read
+# 1 expression(s) specifying forbidden configurations read from '/home/vinicius/Projetos/irace/irace/forbidden'
+# 2017-03-11 04:29:16 BRT: Initialization
+# nbIterations: 5
+# minNbSurvival: 5
+# nbParameters: 9
+# seed: 606795262
+# confidence level: 0.95
+# remainingBudget: 20000
+# mu: 5
+
+# 2017-03-11 04:29:16 BRT: Iteration 1 of 5
+# experimentsUsedSoFar: 0
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 20000
+# currentBudget: 4000
+# nbCandidates: 666
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        666|         96|    -0.2234|        666|00:08:48|
+|x|          2|        666|        115|    -0.2231|       1332|00:08:45|
+|x|          3|        666|        169|    -0.2205|       1998|00:08:37|
+|x|          4|        666|        169|    -0.2202|       2664|00:08:41|
+|-|          5|         68|        169|    -0.2197|       3330|00:08:43|
+|=|          6|         68|        169|    -0.2185|       3398|00:00:52|
+|-|          7|         39|        324|    -0.2146|       3466|00:00:54|
+|=|          8|         39|        340|    -0.2195|       3505|00:00:30|
+|=|          9|         39|        340|    -0.2187|       3544|00:00:30|
+|=|         10|         39|         96|    -0.2116|       3583|00:00:30|
+|=|         11|         39|        249|    -0.2117|       3622|00:00:30|
+|=|         12|         39|        249|    -0.2126|       3661|00:00:31|
+|=|         13|         39|        365|    -0.2177|       3700|00:00:31|
+|-|         14|         19|         96|    -0.2136|       3739|00:00:31|
+|=|         15|         19|         96|    -0.2139|       3758|00:00:14|
+|=|         16|         19|         96|    -0.2115|       3777|00:00:14|
+|=|         17|         19|         96|    -0.2118|       3796|00:00:14|
+|=|         18|         19|         96|    -0.2097|       3815|00:00:14|
+|=|         19|         19|         96|    -0.2105|       3834|00:00:14|
+|=|         20|         19|         96|    -0.2107|       3853|00:00:14|
+|=|         21|         19|         96|     -0.211|       3872|00:00:14|
+|=|         22|         19|         96|    -0.2094|       3891|00:00:14|
+|=|         23|         19|        561|    -0.2122|       3910|00:00:14|
+|=|         24|         19|        561|    -0.2126|       3929|00:00:14|
+|=|         25|         19|        561|    -0.2127|       3948|00:00:14|
+|=|         26|         19|        561|    -0.2131|       3967|00:00:14|
+|=|         27|         19|        324|    -0.2096|       3986|00:00:14|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         324	mean value:    -0.2096
+
+Description of the selected candidate:
+    .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+324  324   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.83  UniformMutation                0.36             NA  0.28                     NA                    NA         0.4       NA
+
+
+# Elite candidates:
+    algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+324   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.83  UniformMutation                0.36             NA  0.28                     NA                    NA        0.40
+561   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.76  UniformMutation                0.19             NA  0.32                     NA                    NA        0.70
+157   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.81  UniformMutation                0.65             NA  0.28                     NA                    NA        0.91
+340   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.94  UniformMutation                0.60             NA  0.30                     NA                    NA        0.11
+96    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.71  UniformMutation                0.16             NA  0.31                     NA                    NA        0.17
+# 2017-03-11 05:21:26 BRT: Iteration 2 of 5
+# experimentsUsedSoFar: 3986
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 16014
+# currentBudget: 4003
+# nbCandidates: 571
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        571|         73|    -0.2249|        571|00:07:35|
+|x|          2|        571|        515|    -0.2248|       1142|00:07:30|
+|x|          3|        571|        247|    -0.2221|       1713|00:07:34|
+|x|          4|        571|        120|    -0.2224|       2284|00:07:35|
+|-|          5|         92|        120|    -0.2215|       2855|00:07:38|
+|-|          6|         28|        120|    -0.2222|       2947|00:01:12|
+|=|          7|         28|        120|    -0.2212|       2975|00:00:21|
+|=|          8|         28|        120|    -0.2208|       3003|00:00:21|
+|=|          9|         28|        120|    -0.2158|       3031|00:00:21|
+|=|         10|         28|        120|    -0.2166|       3059|00:00:21|
+|=|         11|         28|        120|    -0.2173|       3087|00:00:22|
+|-|         12|         18|        120|    -0.2171|       3115|00:00:23|
+|=|         13|         18|        120|    -0.2138|       3133|00:00:13|
+|=|         14|         18|        120|    -0.2144|       3151|00:00:14|
+|=|         15|         18|         28|    -0.2186|       3169|00:00:15|
+|=|         16|         18|         28|    -0.2187|       3187|00:00:13|
+|=|         17|         18|         28|    -0.2192|       3205|00:00:14|
+|=|         18|         18|         28|    -0.2197|       3223|00:00:13|
+|=|         19|         18|         28|    -0.2198|       3241|00:00:13|
+|=|         20|         18|         28|      -0.22|       3259|00:00:13|
+|=|         21|         18|         28|    -0.2202|       3277|00:00:13|
+|=|         22|         18|         28|    -0.2203|       3295|00:00:13|
+|=|         23|         18|         28|    -0.2203|       3313|00:00:13|
+|=|         24|         18|         28|    -0.2204|       3331|00:00:13|
+|-|         25|          9|         28|    -0.2203|       3349|00:00:15|
+|=|         26|          9|         28|    -0.2203|       3358|00:00:07|
+|=|         27|          9|         28|      -0.22|       3367|00:00:07|
+|=|         28|          9|         28|    -0.2198|       3376|00:00:07|
+|=|         29|          9|         28|    -0.2197|       3385|00:00:07|
+|=|         30|          9|         28|    -0.2197|       3394|00:00:07|
+|=|         31|          9|         28|    -0.2195|       3403|00:00:07|
+|=|         32|          9|        482|    -0.2075|       3412|00:00:06|
+|=|         33|          9|         28|    -0.2196|       3421|00:00:07|
+|=|         34|          9|         28|    -0.2197|       3430|00:00:06|
+|=|         35|          9|        482|    -0.2087|       3439|00:00:07|
+|=|         36|          9|        482|    -0.2092|       3448|00:00:06|
+|=|         37|          9|        482|    -0.2082|       3457|00:00:07|
+|=|         38|          9|        482|    -0.2086|       3466|00:00:07|
+|=|         39|          9|        482|    -0.2091|       3475|00:00:07|
+|=|         40|          9|        482|    -0.2094|       3484|00:00:07|
+|=|         41|          9|        482|    -0.2085|       3493|00:00:06|
+|=|         42|          9|         28|    -0.2196|       3502|00:00:06|
+|=|         43|          9|         28|    -0.2198|       3511|00:00:07|
+|=|         44|          9|         28|    -0.2188|       3520|00:00:07|
+|=|         45|          9|         28|     -0.219|       3529|00:00:06|
+|=|         46|          9|         28|     -0.219|       3538|00:00:06|
+|=|         47|          9|         28|     -0.219|       3547|00:00:07|
+|=|         48|          9|         28|    -0.2181|       3556|00:00:07|
+|=|         49|          9|         28|    -0.2182|       3565|00:00:07|
+|=|         50|          9|         28|    -0.2181|       3574|00:00:07|
+|=|         51|          9|         28|    -0.2184|       3583|00:00:07|
+|=|         52|          9|         28|    -0.2185|       3592|00:00:07|
+|=|         53|          9|         28|    -0.2186|       3601|00:00:07|
+|=|         54|          9|         28|    -0.2186|       3610|00:00:07|
+|=|         55|          9|         28|    -0.2184|       3619|00:00:07|
+|=|         56|          9|          4|    -0.2126|       3628|00:00:07|
+|=|         57|          9|          4|    -0.2129|       3637|00:00:07|
+|-|         58|          6|          4|     -0.213|       3646|00:00:07|
+|=|         59|          6|         28|    -0.2185|       3652|00:00:04|
+|=|         60|          6|         28|    -0.2185|       3658|00:00:04|
+|=|         61|          6|         28|    -0.2185|       3664|00:00:04|
+|=|         62|          6|         28|    -0.2185|       3670|00:00:04|
+|=|         63|          6|         28|    -0.2178|       3676|00:00:04|
+|=|         64|          6|         28|    -0.2178|       3682|00:00:04|
+|=|         65|          6|         28|    -0.2178|       3688|00:00:04|
+|=|         66|          6|         28|     -0.218|       3694|00:00:05|
+|=|         67|          6|         28|     -0.218|       3700|00:00:05|
+|=|         68|          6|         28|    -0.2179|       3706|00:00:04|
+|=|         69|          6|         28|    -0.2181|       3712|00:00:04|
+|=|         70|          6|         28|    -0.2181|       3718|00:00:04|
+|=|         71|          6|         28|    -0.2183|       3724|00:00:04|
+|=|         72|          6|         28|    -0.2183|       3730|00:00:04|
+|=|         73|          6|         28|    -0.2177|       3736|00:00:04|
+|=|         74|          6|         28|    -0.2177|       3742|00:00:04|
+|=|         75|          6|         28|    -0.2171|       3748|00:00:04|
+|=|         76|          6|         28|    -0.2173|       3754|00:00:04|
+|=|         77|          6|         28|    -0.2167|       3760|00:00:04|
+|=|         78|          6|          4|    -0.2128|       3766|00:00:04|
+|=|         79|          6|          4|     -0.213|       3772|00:00:04|
+|=|         80|          6|          4|    -0.2131|       3778|00:00:04|
+|=|         81|          6|          4|    -0.2132|       3784|00:00:04|
+|=|         82|          6|          4|    -0.2127|       3790|00:00:04|
+|=|         83|          6|          4|    -0.2128|       3796|00:00:04|
+|=|         84|          6|          4|    -0.2124|       3802|00:00:04|
+|=|         85|          6|          4|    -0.2119|       3808|00:00:04|
+|=|         86|          6|          4|     -0.212|       3814|00:00:04|
+|=|         87|          6|          4|    -0.2115|       3820|00:00:04|
+|=|         88|          6|          4|    -0.2117|       3826|00:00:04|
+|=|         89|          6|          4|    -0.2118|       3832|00:00:04|
+|=|         90|          6|          4|    -0.2119|       3838|00:00:05|
+|=|         91|          6|          4|    -0.2119|       3844|00:00:05|
+|=|         92|          6|          4|    -0.2115|       3850|00:00:04|
+|=|         93|          6|          4|    -0.2116|       3856|00:00:04|
+|=|         94|          6|          4|    -0.2117|       3862|00:00:04|
+|=|         95|          6|          4|    -0.2118|       3868|00:00:04|
+|=|         96|          6|          4|    -0.2119|       3874|00:00:04|
+|=|         97|          6|          4|    -0.2115|       3880|00:00:04|
+|=|         98|          6|         28|    -0.2171|       3886|00:00:04|
+|=|         99|          6|         28|    -0.2171|       3892|00:00:04|
+|=|        100|          6|         28|    -0.2172|       3898|00:00:04|
+|=|        101|          6|         28|    -0.2172|       3904|00:00:04|
+|=|        102|          6|         28|    -0.2173|       3910|00:00:04|
+|=|        103|          6|         28|    -0.2173|       3916|00:00:04|
+|=|        104|          6|         28|    -0.2172|       3922|00:00:04|
+|=|        105|          6|         28|    -0.2172|       3928|00:00:04|
+|=|        106|          6|         28|    -0.2173|       3934|00:00:04|
+|=|        107|          6|         28|    -0.2172|       3940|00:00:04|
+|=|        108|          6|         28|    -0.2173|       3946|00:00:04|
+|=|        109|          6|         28|    -0.2173|       3952|00:00:04|
+|=|        110|          6|         28|    -0.2174|       3958|00:00:04|
+|=|        111|          6|         28|    -0.2174|       3964|00:00:04|
+|=|        112|          6|         28|    -0.2171|       3970|00:00:05|
+|=|        113|          6|         28|    -0.2167|       3976|00:00:05|
+|=|        114|          6|         28|    -0.2167|       3982|00:00:04|
+|=|        115|          6|         28|    -0.2168|       3988|00:00:04|
+|=|        116|          6|         28|    -0.2168|       3994|00:00:06|
+|=|        117|          6|         28|    -0.2167|       4000|00:00:04|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          28	mean value:    -0.2167
+
+Description of the selected candidate:
+    .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+689  689   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.96             NA  0.26                     NA                    NA        0.02      340
+
+
+# Elite candidates:
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+689    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.96             NA  0.26                     NA                    NA        0.02
+340    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.94  UniformMutation                0.60             NA  0.30                     NA                    NA        0.11
+908    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.89  UniformMutation                0.28             NA  0.26                     NA                    NA        0.69
+1143   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.71             NA  0.34                     NA                    NA        0.36
+781    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.91  UniformMutation                0.07             NA  0.28                     NA                    NA        0.58
+# 2017-03-11 06:14:25 BRT: Iteration 3 of 5
+# experimentsUsedSoFar: 7986
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 12014
+# currentBudget: 4004
+# nbCandidates: 500
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        500|        431|    -0.2286|        500|00:06:38|
+|x|          2|        500|          1|    -0.2261|       1000|00:06:38|
+|x|          3|        500|          1|    -0.2263|       1500|00:06:37|
+|x|          4|        500|        372|    -0.2256|       2000|00:06:37|
+|-|          5|         69|          1|    -0.2252|       2500|00:06:38|
+|=|          6|         69|          1|    -0.2256|       2569|00:00:52|
+|=|          7|         69|          1|    -0.2241|       2638|00:00:52|
+|=|          8|         69|          1|    -0.2232|       2707|00:00:53|
+|=|          9|         69|          1|    -0.2229|       2776|00:00:57|
+|=|         10|         69|          1|    -0.2227|       2845|00:00:54|
+|=|         11|         69|          1|    -0.2228|       2914|00:00:55|
+|=|         12|         69|          1|    -0.2227|       2983|00:00:52|
+|=|         13|         69|        276|    -0.2195|       3052|00:00:54|
+|-|         14|         22|        276|    -0.2198|       3121|00:00:54|
+|=|         15|         22|        276|    -0.2203|       3143|00:00:17|
+|=|         16|         22|        276|    -0.2174|       3165|00:00:17|
+|=|         17|         22|        276|    -0.2178|       3187|00:00:17|
+|=|         18|         22|        276|    -0.2155|       3209|00:00:17|
+|=|         19|         22|        276|    -0.2158|       3231|00:00:17|
+|=|         20|         22|          1|    -0.2215|       3253|00:00:17|
+|=|         21|         22|          1|    -0.2216|       3275|00:00:17|
+|=|         22|         22|          1|    -0.2218|       3297|00:00:18|
+|=|         23|         22|        372|    -0.2118|       3319|00:00:17|
+|=|         24|         22|          1|    -0.2218|       3341|00:00:17|
+|=|         25|         22|        372|    -0.2109|       3363|00:00:17|
+|=|         26|         22|        248|    -0.2143|       3385|00:00:17|
+|=|         27|         22|        248|    -0.2147|       3407|00:00:18|
+|=|         28|         22|          1|    -0.2213|       3429|00:00:16|
+|=|         29|         22|        248|    -0.2137|       3451|00:00:19|
+|=|         30|         22|        248|    -0.2139|       3473|00:00:17|
+|=|         31|         22|          1|    -0.2216|       3495|00:00:19|
+|=|         32|         22|          1|    -0.2215|       3517|00:00:17|
+|=|         33|         22|        248|    -0.2133|       3539|00:00:17|
+|=|         34|         22|          1|     -0.221|       3561|00:00:16|
+|=|         35|         22|          1|    -0.2211|       3583|00:00:17|
+|=|         36|         22|          1|    -0.2212|       3605|00:00:16|
+|=|         37|         22|          1|    -0.2199|       3627|00:00:17|
+|=|         38|         22|        248|    -0.2121|       3649|00:00:17|
+|=|         39|         22|        248|    -0.2123|       3671|00:00:17|
+|=|         40|         22|        248|    -0.2113|       3693|00:00:18|
+|=|         41|         22|        248|    -0.2116|       3715|00:00:17|
+|=|         42|         22|         73|    -0.2146|       3737|00:00:17|
+|-|         43|         14|         73|    -0.2149|       3759|00:00:17|
+|=|         44|         14|         73|     -0.214|       3773|00:00:12|
+|=|         45|         14|         73|    -0.2142|       3787|00:00:11|
+|=|         46|         14|         73|    -0.2144|       3801|00:00:10|
+|=|         47|         14|         73|    -0.2146|       3815|00:00:10|
+|=|         48|         14|         73|    -0.2148|       3829|00:00:10|
+|=|         49|         14|         73|     -0.215|       3843|00:00:12|
+|=|         50|         14|         73|     -0.215|       3857|00:00:10|
+|=|         51|         14|         73|     -0.215|       3871|00:00:10|
+|=|         52|         14|         73|    -0.2152|       3885|00:00:10|
+|=|         53|         14|         73|    -0.2154|       3899|00:00:12|
+|=|         54|         14|         73|    -0.2156|       3913|00:00:10|
+|=|         55|         14|         73|    -0.2156|       3927|00:00:10|
+|=|         56|         14|         73|    -0.2157|       3941|00:00:10|
+|=|         57|         14|         73|    -0.2159|       3955|00:00:10|
+|=|         58|         14|         73|     -0.216|       3969|00:00:12|
+|=|         59|         14|         73|    -0.2162|       3983|00:00:11|
+|=|         60|         14|         73|    -0.2163|       3997|00:00:10|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          73	mean value:    -0.2163
+
+Description of the selected candidate:
+     .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+1300 1300   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.99  UniformMutation                0.56             NA  0.31                     NA                    NA        0.02      340
+
+
+# Elite candidates:
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+1300   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.99  UniformMutation                0.56             NA  0.31                     NA                    NA        0.02
+1475   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.96  UniformMutation                0.84             NA  0.32                     NA                    NA        0.05
+1257   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.99  UniformMutation                0.84             NA  0.30                     NA                    NA        0.03
+689    NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.96             NA  0.26                     NA                    NA        0.02
+1337   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.20             NA  0.31                     NA                    NA        0.67
+# 2017-03-11 07:07:24 BRT: Iteration 4 of 5
+# experimentsUsedSoFar: 11983
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 8017
+# currentBudget: 4008
+# nbCandidates: 445
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        445|        114|    -0.2308|        445|00:05:54|
+|x|          2|        445|        438|    -0.2279|        890|00:05:55|
+|x|          3|        445|         95|    -0.2262|       1335|00:05:52|
+|x|          4|        445|        306|    -0.2257|       1780|00:05:54|
+|-|          5|        127|        306|    -0.2258|       2225|00:05:54|
+|=|          6|        127|        306|    -0.2258|       2352|00:01:39|
+|=|          7|        127|        306|     -0.226|       2479|00:01:39|
+|=|          8|        127|        306|    -0.2258|       2606|00:01:39|
+|=|          9|        127|        306|    -0.2253|       2733|00:01:41|
+|=|         10|        127|        306|    -0.2252|       2860|00:01:40|
+|=|         11|        127|        306|    -0.2253|       2987|00:01:39|
+|=|         12|        127|        306|    -0.2252|       3114|00:01:39|
+|=|         13|        127|        306|    -0.2241|       3241|00:01:37|
+|=|         14|        127|        306|    -0.2206|       3368|00:01:41|
+|=|         15|        127|        306|    -0.2208|       3495|00:01:40|
+|=|         16|        127|        306|    -0.2212|       3622|00:01:39|
+|=|         17|        127|        306|    -0.2211|       3749|00:01:39|
+|-|         18|         35|        306|    -0.2212|       3876|00:01:38|
+|=|         19|         35|        306|    -0.2212|       3911|00:00:28|
+|=|         20|         35|        306|    -0.2214|       3946|00:00:26|
+|=|         21|         35|        306|    -0.2213|       3981|00:00:27|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         306	mean value:    -0.2213
+
+Description of the selected candidate:
+     .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+2028 2028   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.94             NA  0.32                     NA                    NA        0.08     1257
+
+
+# Elite candidates:
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+2028   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.94             NA  0.32                     NA                    NA        0.08
+1940   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.80             NA  0.28                     NA                    NA        0.05
+1300   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.99  UniformMutation                0.56             NA  0.31                     NA                    NA        0.02
+1852   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.77             NA  0.30                     NA                    NA        0.06
+2015   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.96  UniformMutation                0.59             NA  0.33                     NA                    NA        0.11
+# 2017-03-11 07:59:56 BRT: Iteration 5 of 5
+# experimentsUsedSoFar: 15964
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 4036
+# currentBudget: 4036
+# nbCandidates: 403
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        403|         71|    -0.2285|        403|00:05:25|
+|x|          2|        403|        313|    -0.2272|        806|00:05:16|
+|x|          3|        403|        313|    -0.2268|       1209|00:05:20|
+|x|          4|        403|        112|     -0.227|       1612|00:05:16|
+|-|          5|        161|        313|    -0.2254|       2015|00:05:20|
+|=|          6|        161|          1|    -0.2257|       2176|00:02:05|
+|=|          7|        161|        402|    -0.2187|       2337|00:02:05|
+|=|          8|        161|        402|    -0.2196|       2498|00:02:05|
+|=|          9|        161|        256|    -0.2247|       2659|00:02:05|
+|=|         10|        161|        256|    -0.2249|       2820|00:02:07|
+|=|         11|        161|         92|    -0.2232|       2981|00:02:04|
+|=|         12|        161|        104|    -0.2242|       3142|00:02:05|
+|=|         13|        161|         92|    -0.2234|       3303|00:02:09|
+|=|         14|        161|        104|    -0.2209|       3464|00:02:10|
+|=|         15|        161|        104|    -0.2211|       3625|00:02:07|
+|=|         16|        161|        104|    -0.2211|       3786|00:02:08|
+|=|         17|        161|        104|    -0.2205|       3947|00:02:09|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         104	mean value:    -0.2205
+
+Description of the selected candidate:
+     .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+2266 2266   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.91  UniformMutation                0.51             NA  0.29                     NA                    NA        0.07     1300
+
+
+# Elite candidates:
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+2266   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.91  UniformMutation                0.51             NA  0.29                     NA                    NA        0.07
+2281   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.96  UniformMutation                0.82             NA  0.34                     NA                    NA        0.07
+2338   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 1.00  UniformMutation                0.53             NA  0.36                     NA                    NA        0.02
+2400   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.97  UniformMutation                0.83             NA  0.31                     NA                    NA        0.12
+2427   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.76             NA  0.31                     NA                    NA        0.08
+# 2017-03-11 08:52:01 BRT: Iteration 6 of 6
+# experimentsUsedSoFar: 19911
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 89
+# currentBudget: 89
+# nbCandidates: 8
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|          8|          2|    -0.2241|          8|00:00:06|
+|x|          2|          8|          2|    -0.1996|         16|00:00:06|
+|x|          3|          8|          2|    -0.2082|         24|00:00:06|
+|x|          4|          8|          1|    -0.2208|         32|00:00:06|
+|=|          5|          8|          2|    -0.2057|         40|00:00:06|
+|=|          6|          8|          7|    -0.2147|         48|00:00:06|
+|=|          7|          8|          7|    -0.2162|         56|00:00:06|
+|=|          8|          8|          7|    -0.2176|         64|00:00:06|
+|=|          9|          8|          7|    -0.2178|         72|00:00:06|
+|=|         10|          8|          7|    -0.2187|         80|00:00:06|
+|=|         11|          8|          7|    -0.2195|         88|00:00:06|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:           7	mean value:    -0.2195
+
+Description of the selected candidate:
+     .ID. algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation .PARENT.
+2567 2567   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.49             NA  0.28                     NA                    NA        0.04     2266
+
+
+# Elite candidates:
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+2567   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.49             NA  0.28                     NA                    NA        0.04
+2266   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.91  UniformMutation                0.51             NA  0.29                     NA                    NA        0.07
+2338   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 1.00  UniformMutation                0.53             NA  0.36                     NA                    NA        0.02
+2400   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.97  UniformMutation                0.83             NA  0.31                     NA                    NA        0.12
+2281   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.96  UniformMutation                0.82             NA  0.34                     NA                    NA        0.07
+# 2017-03-11 08:53:12 BRT: Stopped because there is no enough budget left to race newly sampled configurations
+# Iteration: 7
+# nbIterations: 7
+# experimentsUsedSoFar: 19999
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 1
+# currentBudget: 1
+# number of elites: 5
+# nbCandidates: 0
+# mu: 5
+# Best candidates
+     algorithm populationSize maxEvaluations         selectionOperator crossoverOperator crossoverProbability mutationOperator mutationProbability tournamentSize alpha distributionIndexCross distributionIndexMuta pertubation
+2567   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.98  UniformMutation                0.49             NA  0.28                     NA                    NA        0.04
+2266   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.91  UniformMutation                0.51             NA  0.29                     NA                    NA        0.07
+2338   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 1.00  UniformMutation                0.53             NA  0.36                     NA                    NA        0.02
+2400   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.97  UniformMutation                0.83             NA  0.31                     NA                    NA        0.12
+2281   NSGA-II            100          10000 BinaryTournamentSelection BLXAlphaCrossover                 0.96  UniformMutation                0.82             NA  0.34                     NA                    NA        0.07
+# Best candidates (as commandlines)
+1  --algorithm NSGA-II --populationSize=100 --maxEvaluations=10000 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.98 --mutationOperator=UniformMutation --mutationProbability 0.49 --alpha=0.28 --pertubation=0.04
+2  --algorithm NSGA-II --populationSize=100 --maxEvaluations=10000 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.91 --mutationOperator=UniformMutation --mutationProbability 0.51 --alpha=0.29 --pertubation=0.07
+3  --algorithm NSGA-II --populationSize=100 --maxEvaluations=10000 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=1 --mutationOperator=UniformMutation --mutationProbability 0.53 --alpha=0.36 --pertubation=0.02
+4  --algorithm NSGA-II --populationSize=100 --maxEvaluations=10000 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.97 --mutationOperator=UniformMutation --mutationProbability 0.83 --alpha=0.31 --pertubation=0.12
+5  --algorithm NSGA-II --populationSize=100 --maxEvaluations=10000 --selectionOperator=BinaryTournamentSelection --crossoverOperator=BLXAlphaCrossover --crossoverProbability=0.96 --mutationOperator=UniformMutation --mutationProbability 0.82 --alpha=0.34 --pertubation=0.07
