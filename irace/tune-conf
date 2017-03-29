@@ -46,9 +46,9 @@ hookEvaluate = "./hook-evaluate"
 ## determines the (maximum) budget of experiments for the tuning, unless
 ## timeBudget is positive.
 #http://iridia.ulb.ac.be/IridiaTrSeries/link/IridiaTr2012-019.pdf recomended 2000 running 200eval. We will use 300eval for 600.000 eval
-#maxExperiments = 2000
+maxExperiments = 2000
 #http://iridia.ulb.ac.be/IridiaTrSeries/rev/IridiaTr2014-012r001.pdf
-maxExperiments = 20000
+#maxExperiments = 20000
 #maxExperiments=300
 
 ## Indicates the number of decimal places to be considered for the
@@ -60,7 +60,7 @@ digits = 2
 
 ## Number of calls to hookRun to execute in parallel. Less than 2
 # means calls to hookRun are sequentially executed.
-parallel = 7
+parallel = 8
 
 ## Enable/disable load-balancing when executing experiments in
 ## parallel. Load-balancing makes better use of computing resources, but
