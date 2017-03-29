@@ -1,13 +1,13 @@
 #!/bin/bash
 problems="WFG1 WFG9 WFG2 WFG3 WFG6 WFG8 WFG5 WFG4 WFG7"
-problems="WFG1"
+#problems="WFG1"
 
 function addToExecution {
 	problem=$1
 	nObj=$2
 	k=$3
 	l=$4
-    echo "problemName = "$problem > "problem"
+        echo "problemName = "$problem > "problem"
 	echo "numberOfPositionVariables = "$k >> "problem"
 	echo "numberOfDistanceVariables = "$l >> "problem"
 	echo "nObj = "$nObj >> "problem"
@@ -16,7 +16,7 @@ function addToExecution {
 	echo "Created"
 }  
 
-function startrun{
+function startrun {
     problem=$1
     nObj=$2
     k=$3
@@ -27,7 +27,7 @@ function startrun{
     echo "Run"
     SECONDS=0
     Rscript irace-run.R > $namefile"_outcome.txt"
-    wait
+    #wait
     echo "run "$namefile" in "$SECONDS
 }
 
@@ -44,13 +44,13 @@ done
 #done
 
 #DTLZ 2 obj
-#startrun "DTLZ1" 2 0 6
-#startrun "DTLZ2" 2 0 11
-#startrun "DTLZ3" 2 0 11
-#startrun "DTLZ4" 2 0 11
-#startrun "DTLZ5" 2 0 11
-#startrun "DTLZ6" 2 0 11
-#startrun "DTLZ7" 2 0 21
+startrun "DTLZ1" 2 0 6
+startrun "DTLZ2" 2 0 11
+startrun "DTLZ3" 2 0 11
+startrun "DTLZ4" 2 0 11
+startrun "DTLZ5" 2 0 11
+startrun "DTLZ6" 2 0 11
+startrun "DTLZ7" 2 0 21
 
 #DTLZ 3 obj
 #startrun "DTLZ1" 3 0 7
