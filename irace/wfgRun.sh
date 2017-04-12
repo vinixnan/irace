@@ -1,6 +1,6 @@
 #!/bin/bash
 problems="WFG1 WFG9 WFG2 WFG3 WFG6 WFG8 WFG5 WFG4 WFG7"
-problems="WFG1"
+#problems="WFG1"
 
 function addToExecution {
 	problem=$1
@@ -51,13 +51,13 @@ done
 #done
 
 #DTLZ 2 obj
-#startrun "DTLZ1" 2 0 6
-#startrun "DTLZ2" 2 0 11
-#startrun "DTLZ3" 2 0 11
-#startrun "DTLZ4" 2 0 11
-#startrun "DTLZ5" 2 0 11
-#startrun "DTLZ6" 2 0 11
-#startrun "DTLZ7" 2 0 21
+startrun "DTLZ1" 2 0 6
+startrun "DTLZ2" 2 0 11
+startrun "DTLZ3" 2 0 11
+startrun "DTLZ4" 2 0 11
+startrun "DTLZ5" 2 0 11
+startrun "DTLZ6" 2 0 11
+startrun "DTLZ7" 2 0 21
 
 #DTLZ 3 obj
 #startrun "DTLZ1" 3 0 7
