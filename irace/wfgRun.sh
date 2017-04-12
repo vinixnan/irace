@@ -45,25 +45,31 @@ function startrun {
 
 
 #WFG 3 obj
-for problem in $problems
-do
-    startrun $problem 3 4 20
-done
+#for problem in $problems
+#do
+#    startrun $problem 3 4 20
+#done
 
 #DTLZ 2 obj
-startrun "DTLZ1" 2 0 6
-startrun "DTLZ2" 2 0 11
-startrun "DTLZ3" 2 0 11
-startrun "DTLZ4" 2 0 11
-startrun "DTLZ5" 2 0 11
-startrun "DTLZ6" 2 0 11
-startrun "DTLZ7" 2 0 21
+#startrun "DTLZ1" 2 0 6
+#startrun "DTLZ2" 2 0 11
+#startrun "DTLZ3" 2 0 11
+#startrun "DTLZ4" 2 0 11
+#startrun "DTLZ5" 2 0 11
+#startrun "DTLZ6" 2 0 11
+#startrun "DTLZ7" 2 0 21
 
 #DTLZ 3 obj
-startrun "DTLZ1" 3 0 7
-startrun "DTLZ2" 3 0 12
-startrun "DTLZ3" 3 0 12
-startrun "DTLZ4" 3 0 12
-startrun "DTLZ5" 3 0 12
-startrun "DTLZ6" 3 0 12
-startrun "DTLZ7" 3 0 22
+#startrun "DTLZ1" 3 0 7
+#startrun "DTLZ2" 3 0 12
+#startrun "DTLZ3" 3 0 12
+#startrun "DTLZ4" 3 0 12
+#startrun "DTLZ5" 3 0 12
+#startrun "DTLZ6" 3 0 12
+#startrun "DTLZ7" 3 0 22
+
+startrun "ZDT1" 2 0 30
+startrun "ZDT2" 2 0 30
+startrun "ZDT3" 2 0 30
+startrun "ZDT4" 2 0 10
+startrun "ZDT6" 2 0 10
